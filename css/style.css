@@ -632,7 +632,8 @@ footer .copyright-text {
 .navbar-mp{
     grid-area: navbar-mp;
     background-color: silver;
-    padding-top: 220px;
+    padding-top: 200px;
+    padding-bottom: 30px
 }
 .main-mp{
     grid-area: main-mp;
@@ -656,6 +657,29 @@ footer .copyright-text {
     "footer-mp";
         
 }
+
+.navbar-mp .selector{
+    font-family: 'Lansdowne DEMO', sans-serif;
+    font-size: 25px;
+    background-color: #6BA43A;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 30px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display:flex;
+    flex-direction:column;
+    padding-top: 0px;
+    margin-top: 0px;
+
+    }
+
+    .navbar-mp .selector .opciones{
+        font-family: 'Lansdowne DEMO', sans-serif;
+        font-size: 20px;
+    }
+
 
 /************************************************************/
 
@@ -1063,6 +1087,19 @@ section.store .product-slider  .product-info button:hover {
             "footer-mp  footer-mp";           
     }
 
+    .navbar-mp .selector{
+        font-size: 20px;
+        height: 18px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        }
+    
+        .navbar-mp .selector .opciones{
+            font-size: 18px;
+        }
+    
 
 
     /********************about***************************/
@@ -1302,7 +1339,28 @@ section.store .product-slider  .product-info button:hover {
         grid-area: navbar-mp;
         background-color: silver;
         padding-top: 200px;
+        
     }
+
+    .navbar-mp .selector{
+    font-family: 'Lansdowne DEMO', sans-serif;
+    font-size: 25px;
+    background-color: #6BA43A;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 30px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display:flex;
+    flex-direction:column;
+    }
+
+    .navbar-mp .selector .opciones{
+        font-family: 'Lansdowne DEMO', sans-serif;
+        font-size: 25px;
+    }
+
     .main-mp{
         grid-area: main-mp;
         background-color: #e3e024;
