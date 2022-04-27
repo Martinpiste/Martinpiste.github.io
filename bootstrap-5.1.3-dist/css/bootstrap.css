@@ -4019,6 +4019,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4210,6 +4211,9 @@ textarea.form-control-lg {
     overflow-y: visible;
   }
 }
+
+
+
 @media (min-width: 992px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
