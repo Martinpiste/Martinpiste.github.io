@@ -13,6 +13,13 @@
     font-size:15px;
 }
 
+.ffd-mp{
+    display:flex;
+    flex-direction:row;
+}
+
+
+
 section.start{
     border: 0;
     position:relative;
@@ -739,6 +746,12 @@ section.contact form button:hover {
 
 
 @media screen and (min-width: 768px){
+
+    .ffd-mp{
+        display:flex;
+        flex-direction:column;
+    }
+
     section.start{
         border: 0;
         position:relative;
@@ -906,10 +919,6 @@ section.contact form button:hover {
         padding-bottom: 25px;
     }
 
-
-    
-
-
  }
 
 
@@ -918,6 +927,11 @@ section.contact form button:hover {
 
  @media screen and (min-width: 1280px){
   /************************************Main******************************************/
+  .ffd-mp{
+    display:flex;
+    flex-direction:column;
+}
+
 
   .start-info{
     width: 40%;
