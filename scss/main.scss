@@ -18,8 +18,7 @@
     flex-direction:row;
 }
 
-
-section.start{
+.start{
     border: 0;
     position:relative;
     padding-top: 150px;
@@ -114,13 +113,9 @@ section.start{
 
 /******************************seller*************************/
 
-section.store {
-    padding-top: 20px;
-    background-color: #ffffff;
-}
 
-section.best-sellers{
-
+.best-sellers{
+    
     form input {
         height: 28px;
         width:50%;
@@ -138,7 +133,7 @@ section.best-sellers{
         margin-bottom: 10px;
         text-align: center;
     }
-
+    
     h2{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-family: 'Lansdowne DEMO', sans-serif;
@@ -155,12 +150,12 @@ section.best-sellers{
         border-top: 5px solid #6ba43a;
         width: 66px;
     }
-
+    
     .product-slider{
         margin-top:10x;   
         background-color: #ffffff7c;  
         
-       
+        
         
         .product {
             border-radius:10px;
@@ -177,15 +172,15 @@ section.best-sellers{
             background-color: rgb(255, 255, 255);
             margin-top: 25px;
             width: 250px;
-
+            
             img {
                 max-width: 100%;
                 height: 100px;
             }
-
+            
             .product-info{
                 margin-top: 12px;
-
+                
                 .categories {
                     color:#6BA43A ;
                     font-weight: normal;
@@ -213,7 +208,7 @@ section.best-sellers{
                     margin-bottom:10px;
                     margin-top: 0;
                 }
-                 
+                
                 button {
                     height: 35px;
                     width: 60%;
@@ -226,17 +221,17 @@ section.best-sellers{
                     letter-spacing: 0.4px;
                     line-height: 24px;
                 }
-
+                
                 button:hover {
                     color: #fff;
                     border:1px solid #F5B335;
                     background-color: #F5B335;
                     border:1px solid #3E3e3e;
                 }
-
+                
             }
         }
-
+        
         .product.offer::before {
             content:"PROMOCION";
             position:absolute;
@@ -261,11 +256,10 @@ section.best-sellers{
         padding: 0px 25px 50px 25px;
         background-color: rgba(255, 255, 255, 0.198);
     }
-
+    
 }
 
 /********************footer************************/
-
 
 footer{
     
@@ -284,7 +278,7 @@ footer{
         
         ul {
             list-style: none;
-
+            
             li{
                 a {
                     color: #e0e0e0;
@@ -300,11 +294,11 @@ footer{
                 
                 a:hover {
                     color: #73308a;
-                
+                    
                 }
-
+                
             }
-
+            
         }
         
     }
@@ -324,7 +318,7 @@ footer{
             text-align: justify; 
         }
     }
-
+    
     .copyright-text {
         color: white;
         background-color: #2b2b2b;
@@ -337,9 +331,6 @@ footer{
         line-height: 22px
     }
 }
-
-
-
 
 /*****************************store*************************/
 
@@ -370,14 +361,14 @@ footer{
         flex-direction:column;
         padding-top: 0px;
         margin-top: 0px;
-    
+        
         .opciones{
             font-family: 'Lansdowne DEMO', sans-serif;
             font-size: 20px;
         }
-
+        
     }
-
+    
 }
 
 .header-mp{
@@ -407,14 +398,9 @@ footer{
     
 }
 
-
-
-
-
-    
 /************************************************************/
 
-section.store {
+.store {
     padding-top: 20px;
     background-color: #ffffff;
     
@@ -562,7 +548,6 @@ section.store {
     
 }
 
-
 /********************about***************************/
 .container-about{
     padding-top: 180px;
@@ -570,7 +555,8 @@ section.store {
     background-color: rgb(255, 255, 255);
 }
 
-section.about{
+
+.about{
     padding-top: 0px;
     padding-bottom: 25px;
     display:flex;
@@ -578,64 +564,65 @@ section.about{
     text-align: center;
     background-color: #6ba43a;
     height: auto;
-}
-
-.about img{
-    width: 200px;
-    height: auto;  
-    padding-top: 0px;
-}
-
-.about .about-main{
-    background-color: #ffffff;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;   
-}
-
-.about .about-main h2{
-    text-align: center;
-    font-size: 35px;
-    letter-spacing: 0.85px;
-    line-height: 42px;
-    font-weight: normal;
-    margin: 25px 0 30px 0;
-    color:#6ba43a;
-}
-
-.about .about-main p{
     
-    font-size: 20px;
-    text-align: justify;
-    padding-top: 0px;
-    padding-bottom: 12px;
-    margin: 12px;
+    img{
+        width: 200px;
+        height: auto;  
+        padding-top: 0px;
+    }
+    
+    p{
+        font-size: 20px;
+        text-align: justify;
+        padding-top: 10px;
+        padding-bottom: 80px;
+    }
+
+    .about-main{
+        background-color: #ffffff;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;   
+        
+        h2{
+            text-align: center;
+            font-size: 35px;
+            letter-spacing: 0.85px;
+            line-height: 42px;
+            font-weight: normal;
+            margin: 25px 0 30px 0;
+            color:#6ba43a;
+        }
+        
+        p{
+            
+            font-size: 20px;
+            text-align: justify;
+            padding-top: 0px;
+            padding-bottom: 12px;
+            margin: 12px;
+        }
+    }
+     
+    .about-info{
+        background-color: #ffffff;
+        width: 100%;
+        padding-right: 10%;
+        padding-left: 10%;
+        
+        h2{
+            text-align: center;
+            font-size: 35px;
+            letter-spacing: 0.85px;
+            font-weight: normal;
+            color: #6ba43a;
+            line-height: 80px;
+        
+        }
+    }
+      
 }
 
-
-.about .about-info{
-    background-color: #ffffff;
-    width: 100%;
-    padding-right: 10%;
-    padding-left: 10%;
-}
-
-.about .about-info h2{
-    text-align: center;
-    font-size: 35px;
-    letter-spacing: 0.85px;
-    font-weight: normal;
-    color: #6ba43a;
-    line-height: 80px;
-
-}
-
-.about p{
-    font-size: 20px;
-    text-align: justify;
-    padding-top: 10px;
-    padding-bottom: 80px;
-}
 
 /*****************contacto----formulario****************************/
 
@@ -647,7 +634,7 @@ section.about{
     height: auto;
 }
 
-section.contact{
+.contact{
     padding-top: 180px;
     padding-bottom: 20px; 
     display:flex;
@@ -657,83 +644,87 @@ section.contact{
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-}
+    
+    
+    
+    h3 {
+        font-size: 24px;
+        letter-spacing: 0.6px;
+        line-height: 42px;
+        font-weight:normal;
+        margin-top:0;
+        margin-bottom:10px;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    p {
+        font-size: 16px;
+        font-weight:normal;
+        margin-top:0;
+        margin-bottom:20px;
+    }
+    
+    form {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content:center;
+        padding: 10px 10px;
+        
+        input {
+            height: 50px;
+            width:326px;
+            max-width: 80%;
+            border-radius: 60px;
+            box-sizing: border-box;
+            border:1px solid #3e3e3e;
+            border-right: none;
+            color:#3e3e3e;
+            font-family: Heebo;
+            font-size: 12px;
+            letter-spacing: 0.35px;
+            line-height: 21px;
+            padding-left: 22px;
+        }
+        
+        button {
+            height: 50px;
+            width:155px;
+            max-width: 30%;
+            border-radius:  60px;
+            box-sizing: border-box;
+            background-color: #F5B335;
+            border:1px solid #F5B335;
+            color: #FFF;
+            font-size: 12px;
+            letter-spacing: 0.35px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 10px;  
+        }
 
-.contact .contact-main img{
-    width: 270px;
-}
+        button:hover {
+            color: #F5B335;
+            border:1px solid #F5B335;
+            background-color: #FFF;
+            border:1px solid #3E3e3e;
+        }
+    }
+    
+    
+    
 
-
-.contact .contact-main{
-    background-color: #ffffff;
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;   
-}
-
-section.contact h3 {
-    font-size: 24px;
-    letter-spacing: 0.6px;
-    line-height: 42px;
-    font-weight:normal;
-    margin-top:0;
-    margin-bottom:10px;
-    background-color: rgb(255, 255, 255);
-}
-
-section.contact p {
-    font-size: 16px;
-    font-weight:normal;
-    margin-top:0;
-    margin-bottom:20px;
-}
-
-section.contact form {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content:center;
-    padding: 10px 10px;
-}
-
-section.contact form input {
-    height: 50px;
-    width:326px;
-    max-width: 80%;
-    border-radius: 60px;
-    box-sizing: border-box;
-    border:1px solid #3e3e3e;
-    border-right: none;
-    color:#3e3e3e;
-    font-family: Heebo;
-    font-size: 12px;
-    letter-spacing: 0.35px;
-    line-height: 21px;
-    padding-left: 22px;
-}
-
-section.contact form button {
-    height: 50px;
-    width:155px;
-    max-width: 30%;
-    border-radius:  60px;
-    box-sizing: border-box;
-    background-color: #F5B335;
-    border:1px solid #F5B335;
-    color: #FFF;
-    font-size: 12px;
-    letter-spacing: 0.35px;
-    line-height: 21px;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin: 10px;  
-}
-
-section.contact form button:hover {
-    color: #F5B335;
-    border:1px solid #F5B335;
-    background-color: #FFF;
-    border:1px solid #3E3e3e;
+    .contact-main{
+        background-color: #ffffff;
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;   
+        
+        img{
+            width: 270px;
+        }
+    }
 }
 
 /********************work*********************/
@@ -752,8 +743,6 @@ section.contact form button:hover {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
-
 
 
 
@@ -812,15 +801,17 @@ section.contact form button:hover {
     }*/
 
      /********************footer************************/
+    footer{
+        .bottom-nav .container{
+            flex-direction: row;
+        }
     
-     footer .bottom-nav .container{
-        flex-direction: row;
+        .container-footer{
+            width: 33%;
+            padding: 0px 50px;
+        }
     }
 
-    footer .container-footer{
-        width: 33%;
-        padding: 0px 50px;
-    }
 
     /*****************************store*************************/
     /************************************************************/
@@ -829,12 +820,25 @@ section.contact form button:hover {
         grid-area: navbar-mp;
         background-color: silver;
         padding-top: 200px;
+        
+        .selector{
+            font-size: 20px;
+            height: 30px;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+           
+            .opciones{
+                    font-size: 18px;
+            }
+        }
     }
-
+    
     .main-mp{
         grid-area: main-mp;
         padding-top: 180px;
     }
+
     .grid-container-mp{
         display: grid;
         padding: 0;
@@ -847,25 +851,13 @@ section.contact form button:hover {
             "footer-mp  footer-mp";           
     }
 
-    .navbar-mp .selector{
-        font-size: 20px;
-        height: 30px;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-
-        }
-    
-    .navbar-mp .selector .opciones{
-            font-size: 18px;
-    }
-
     /********************about***************************/
     .container-about{
         max-width: 100%;;
         background-color: rgb(255, 255, 255);
     }
-    section.about{
+
+    .about{
         padding-top: 0px;
         padding-bottom: 25px;
         display:flex;
@@ -873,52 +865,55 @@ section.contact form button:hover {
         text-align: center;
         background-color: #6ba43a;
         height: 330px;
+
+        p{
+            font-size: 22px;
+            text-align: justify;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+       
+        .about-main {
+            h2{
+                text-align: center;
+                font-size: 40px;
+                letter-spacing: 0.85px;
+                line-height: 42px;
+                font-weight: normal;
+                margin: 10px 0 10px 0;
+                color:#6ba43a;
+
+            }
+            p{  
+                font-size: 20px;
+                text-align: justify;
+                padding-top: 0px;
+                padding-bottom: 80px;
+            }
+        }
+    
+        .about-info{
+            background-color: #ffffff;
+            width: 50%;
+            padding-right: 25px;
+            padding-left: 25px;
+            
+            h2{
+                text-align: center;
+                font-size: 60px;
+                letter-spacing: 0.85px;
+                font-weight: normal;
+                color: #6ba43a;
+                line-height: 300px;
+            }
+        }
+    
     }
 
-    .about .about-main h2{
-        text-align: center;
-        font-size: 40px;
-        letter-spacing: 0.85px;
-        line-height: 42px;
-        font-weight: normal;
-        margin: 10px 0 10px 0;
-        color:#6ba43a;
-    }
-
-    .about .about-main p{  
-        font-size: 20px;
-        text-align: justify;
-        padding-top: 0px;
-        padding-bottom: 80px;
-    }
-
-
-    .about .about-info{
-        background-color: #ffffff;
-        width: 50%;
-        padding-right: 25px;
-        padding-left: 25px;
-    }
-
-    .about .about-info h2{
-        text-align: center;
-        font-size: 60px;
-        letter-spacing: 0.85px;
-        font-weight: normal;
-        color: #6ba43a;
-        line-height: 300px;
-    }
-
-    .about p{
-        font-size: 22px;
-        text-align: justify;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
 
     /*****************contacto----formulario****************************/
 
-    section.contact{
+    .contact{
         padding-bottom: 20px; 
         display:flex;
         flex-direction: row;
@@ -926,11 +921,13 @@ section.contact form button:hover {
         margin: 2px auto; 
         max-width: 90%;
         background-color: #ffffff;
+        .contact-main{
+            img{
+                width: 300px;
+            }
+        }
     }
 
-    .contact .contact-main img{
-        width: 300px;
-    }
 
     /********************work*********************/
 
@@ -948,21 +945,18 @@ section.contact form button:hover {
         padding-bottom: 25px;
     }
 
- }
-
-
-
-
-
- @media screen and (min-width: 1280px){
-  /************************************Main******************************************/
-  .ffd-mp{
-    display:flex;
-    flex-direction:column;
 }
 
 
-section.start{
+@media screen and (min-width: 1280px){
+  /************************************Main******************************************/
+    .ffd-mp{
+    display:flex;
+    flex-direction:column;
+    }
+
+
+    .start{
 
     .start-info{
         width: 40%;
@@ -981,12 +975,12 @@ section.start{
         }
     }
 
-}
+    }
 
 
-/******************************seller*************************/
+ /******************************seller*************************/
 
-section.best-sellers{
+    .best-sellers{
 
     .product-slider{
         height: 400px; 
@@ -1014,11 +1008,10 @@ section.best-sellers{
         flex-wrap: nowrap;
         animation: slider 20s infinite alternate;
     }
-}
+    }
 
 
-
-@keyframes slider {
+    @keyframes slider {
     0%{margin-left: 0;}
     20%{margin-left: 0;}
 
@@ -1031,10 +1024,10 @@ section.best-sellers{
     75%{margin-left: -75%;}
     100%{margin-left: -75%;}
     
-}
+    }
 
-/*****************************store*************************/
-    /************************************************************/
+ /*****************************store*************************/
+    
 
     .navbar-mp{
         grid-area: navbar-mp;
@@ -1083,51 +1076,55 @@ section.best-sellers{
 
     /********************about***************************/
 
-    section.about{
+
+    .about{
         flex-direction: row;
+        
+        .about-main{
+
+            h2{
+                font-size: 50px;
+                margin: 25px 0 30px 0;
+            }
+        
+            p{  
+                font-size: 24px;
+            }
+            
+        }
+  
+        .about-info{
+            padding-right: 50px;
+            padding-left: 50px;
+            
+            h2{
+                font-size: 70px;
+            }
+        }
+      
+        p{
+            font-size: 24px;
+        }
+
     }
 
-    .about .about-main h2{
-        font-size: 50px;
-        margin: 25px 0 30px 0;
-    }
-
-    .about .about-main p{  
-        font-size: 24px;
-    }
-
-
-    .about .about-info{
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-
-    .about .about-info h2{
-        font-size: 70px;
-    }
-
-    .about p{
-        font-size: 24px;
-    }
 
      /*****************contacto----formulario****************************/
     
-     section.contact{
+     .contact{
         flex-direction: row;
-    }
-
-    .contact .contact-main img{
-        width: 450px;
+        .contact-main{
+            img{
+                width: 450px;             
+            }
+        }
     }
 
     /********************work*********************/
 
-
     .img-work{
         width: 60%;
     }
-
-
 
 } 
 
