@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --rojo:#F5333F;
+    --amarillo:#F5B335;
+    --verde:#6BA43A;
+    --violeta:#73308A;
+}
 
 
 
@@ -18,4 +24,9 @@
 .ffd-mp{
     display:flex;
     flex-direction:row;
+}
+
+.ffdc-mp{
+    display:flex;
+    flex-direction:column;
 }

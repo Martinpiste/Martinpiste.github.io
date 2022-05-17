@@ -5,6 +5,12 @@
   list-style: none;
   box-sizing: border-box; }
 
+:root {
+  --rojo:#F5333F;
+  --amarillo:#F5B335;
+  --verde:#6BA43A;
+  --violeta:#73308A; }
+
 /************************************Main******************************************/
 .fs-mp {
   font-size: 15px; }
@@ -12,6 +18,10 @@
 .ffd-mp {
   display: flex;
   flex-direction: row; }
+
+.ffdc-mp {
+  display: flex;
+  flex-direction: column; }
 
 .start {
   border: 0;
@@ -77,7 +87,7 @@
       width: 220px;
       max-width: 100%;
       border-radius: 92px;
-      background-color: #6ba43a;
+      background-color: var(--verde);
       color: #FFF;
       font-family: Heebo;
       font-size: 16px;
@@ -120,7 +130,7 @@
 .best-sellers hr {
   border-width: 5px;
   border: none;
-  border-top: 5px solid #6ba43a;
+  border-top: 5px solid var(--verde);
   width: 66px; }
 
 .best-sellers .product-slider {
@@ -147,7 +157,7 @@
     .best-sellers .product-slider .product .product-info {
       margin-top: 12px; }
       .best-sellers .product-slider .product .product-info .categories {
-        color: #6BA43A;
+        color: var(--verde);
         font-weight: normal;
         font-size: 18px;
         letter-spacing: 0.35px;
@@ -181,8 +191,8 @@
         line-height: 24px; }
       .best-sellers .product-slider .product .product-info button:hover {
         color: #fff;
-        border: 1px solid #F5B335;
-        background-color: #F5B335;
+        border: 1px solid var(--amarillo);
+        background-color: var(--amarillo);
         border: 1px solid #3E3e3e; }
   .best-sellers .product-slider .product.offer::before {
     content: "PROMOCION";
@@ -198,7 +208,7 @@
     text-align: center;
     padding: 4px 15px;
     border-radius: 40px;
-    background-color: #6BA43A; }
+    background-color: var(--verde); }
 
 .best-sellers .container-product {
   display: flex;
@@ -230,7 +240,7 @@ footer .bottom-nav {
       display: block;
       text-align: justify; }
     footer .bottom-nav ul li a:hover {
-      color: #73308a; }
+      color: var(--violeta); }
 
 footer .container-footer {
   width: 100%;
@@ -242,6 +252,21 @@ footer .container-footer {
   footer .container-footer p {
     color: white;
     text-align: justify; }
+  footer .container-footer .btn--whatsapp {
+    color: #fff;
+    background-color: #128c7e;
+    border-color: #128c7e;
+    cursor: pointer; }
+  footer .container-footer .btn--facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    cursor: pointer; }
+  footer .container-footer .btn--correo {
+    color: #fff;
+    background-color: #833AB4;
+    border-color: #833AB4;
+    cursor: pointer; }
 
 footer .copyright-text {
   color: white;
@@ -270,7 +295,7 @@ footer .copyright-text {
   .navbar-mp .selector {
     font-family: 'Lansdowne DEMO', sans-serif;
     font-size: 25px;
-    background-color: #6BA43A;
+    background-color: var(--verde);
     color: white;
     border-radius: 20px;
     height: 30px;
@@ -287,7 +312,7 @@ footer .copyright-text {
 
 .header-mp {
   grid-area: header-mp;
-  background-color: #6ba43a; }
+  background-color: var(--verde); }
 
 .main-mp {
   grid-area: main-mp;
@@ -319,7 +344,7 @@ footer .copyright-text {
   .store hr {
     border-width: 5px;
     border: none;
-    border-top: 5px solid #6ba43a;
+    border-top: 5px solid var(--verde);
     width: 66px; }
   .store form input {
     height: 30px;
@@ -361,7 +386,7 @@ footer .copyright-text {
       .store .product-slider .product .product-info {
         margin-top: 15px; }
         .store .product-slider .product .product-info .categories {
-          color: #6BA43A;
+          color: var(--verde);
           font-weight: normal;
           font-size: 20px;
           letter-spacing: 0.35px;
@@ -394,13 +419,13 @@ footer .copyright-text {
           letter-spacing: 0.4px;
           line-height: 14px; }
         .store .product-slider .product .product-info button:hover {
-          background-color: #F5B335;
-          border: 1px solid #F5B335;
+          background-color: var(--amarillo);
+          border: 1px solid var(--amarillo);
           color: white;
           cursor: pointer; }
     .store .product-slider .product.offer::before {
       content: "PROMOCION";
-      background-color: red;
+      background-color: var(--rojo);
       position: absolute;
       top: 12px;
       right: 12px;
@@ -413,7 +438,7 @@ footer .copyright-text {
       text-align: center;
       padding: 4px 15px;
       border-radius: 40px;
-      background-color: #6BA43A; }
+      background-color: var(--verde); }
   .store .container {
     display: flex;
     flex-wrap: wrap;
@@ -433,7 +458,7 @@ footer .copyright-text {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #6ba43a;
+  background-color: var(--verde);
   height: auto; }
   .about img {
     width: 200px;
@@ -456,7 +481,7 @@ footer .copyright-text {
       line-height: 42px;
       font-weight: normal;
       margin: 25px 0 30px 0;
-      color: #6ba43a; }
+      color: var(--verde); }
     .about .about-main p {
       font-size: 20px;
       text-align: justify;
@@ -473,7 +498,7 @@ footer .copyright-text {
       font-size: 35px;
       letter-spacing: 0.85px;
       font-weight: normal;
-      color: #6ba43a;
+      color: var(--verde);
       line-height: 80px; }
 
 /*****************contacto----formulario****************************/
@@ -532,8 +557,8 @@ footer .copyright-text {
       max-width: 30%;
       border-radius: 60px;
       box-sizing: border-box;
-      background-color: #F5B335;
-      border: 1px solid #F5B335;
+      background-color: var(--amarillo);
+      border: 1px solid var(--amarillo);
       color: #FFF;
       font-size: 12px;
       letter-spacing: 0.35px;
@@ -543,8 +568,8 @@ footer .copyright-text {
       cursor: pointer;
       margin: 10px; }
     .contact form button:hover {
-      color: #F5B335;
-      border: 1px solid #F5B335;
+      color: var(--amarillo);
+      border: 1px solid var(--amarillo);
       background-color: #FFF;
       border: 1px solid #3E3e3e; }
   .contact .contact-main {
@@ -557,7 +582,7 @@ footer .copyright-text {
 
 /********************work*********************/
 .work-container {
-  background-color: #6BA43A;
+  background-color: var(--verde);
   padding-top: 160px; }
 
 .img-work {
@@ -637,7 +662,7 @@ footer .copyright-text {
     display: flex;
     flex-direction: row;
     text-align: center;
-    background-color: #6ba43a;
+    background-color: var(--verde);
     height: 330px; }
     .about p {
       font-size: 22px;
@@ -651,7 +676,7 @@ footer .copyright-text {
       line-height: 42px;
       font-weight: normal;
       margin: 10px 0 10px 0;
-      color: #6ba43a; }
+      color: var(--verde); }
     .about .about-main p {
       font-size: 20px;
       text-align: justify;
@@ -667,7 +692,7 @@ footer .copyright-text {
         font-size: 60px;
         letter-spacing: 0.85px;
         font-weight: normal;
-        color: #6ba43a;
+        color: var(--verde);
         line-height: 300px; }
   /*****************contacto----formulario****************************/
   .contact {
@@ -682,7 +707,7 @@ footer .copyright-text {
       width: 300px; }
   /********************work*********************/
   .work-container {
-    background-color: #6BA43A; }
+    background-color: var(--verde); }
   .img-work {
     width: 90%;
     display: block;
@@ -753,7 +778,7 @@ footer .copyright-text {
     .navbar-mp .selector {
       font-family: 'Lansdowne DEMO', sans-serif;
       font-size: 25px;
-      background-color: #6BA43A;
+      background-color: var(--verde);
       color: white;
       border-radius: 20px;
       height: 30px;
@@ -767,7 +792,7 @@ footer .copyright-text {
         font-size: 25px; }
   .main-mp {
     grid-area: main-mp;
-    background-color: #e3e024; }
+    background-color: var(--amarillo); }
   .grid-container-mp {
     display: grid;
     padding: 0;
