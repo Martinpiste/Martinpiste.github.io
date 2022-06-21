@@ -1,0 +1,42 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --rojo:#F5333F;
+    --amarillo:#F5B335;
+    --verde:#6BA43A;
+    --violeta:#73308A;
+
+}
+
+.fontmp{
+    font-family: 'Lansdowne DEMO', sans-serif;
+    font-size:25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
+}
+
+/************************************Main******************************************/
+.fs-mp{
+    font-size:15px;
+}
+
+.ffd-mp{
+    display:flex;
+    flex-direction:row;
+}
+
+.ffdc-mp{
+    display:flex;
+    flex-direction:column;
+}
