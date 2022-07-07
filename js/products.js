@@ -60,7 +60,7 @@ function filterproduct(){
     searchArticle=searchArticle.toLowerCase();
     alert(searchArticle)
 
-
+ggft
     let filtrado = products.filter( elementof => elementof.department.includes(searchArticle));
     console.log(filtrado);
     
