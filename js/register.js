@@ -49,7 +49,7 @@ function cleardata(){
 
 
 
-user=[{name:"Martin",   email:"martinpiste135@gmail.com", password:"Ticopiste"},
+user=[{name:"Martin",   email:"martinpiste135@gmail.com", password:"12345"},
       {name:"David",    email:"juan@gmail.com",           password:"juan"},
       {name:"Juan",     email:"david@gmail.com",          password:"david"}];
 
@@ -63,12 +63,12 @@ function login(){
         alert("No se reconoce el email");
         document.getElementById("email").focus()
     }
-    if(password!="Ticopiste" ){
+    if(password!="12345" ){
         alert("Contraseña incorrecta, intente nuevamente");
         document.getElementById("password").focus()
     }
 
-    if(email=="martinpiste135@gmail.com" && password=="Ticopiste" ){
+    if(email=="martinpiste135@gmail.com" && password=="12345" ){
         
         let boton = document.getElementById("BotonSesion"); //Se elimina el boton de cart para que se pueda colocar el texto de bienvenida en us lugar
         boton.remove();
