@@ -1,57 +1,56 @@
 
-function getdata(){
+let miFormulario =document.getElementById("formulario-mp")
+miFormulario.addEventListener("submit",validarFormulario);
+
+let dataUser=[];
+
+function validarFormulario(e){
+
+    e.preventDefault();
+    let formulario=e.target
+
+    let name = formulario.children[0].value;
+    let email = formulario.children[1].value;
+    let password = formulario.children[2].value;
+    let number = formulario.children[3].value;
+
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    console.log(number);
 
     
-
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var number = document.getElementById("number").value;
-    console.log(name+" "+ email+ " "+ password + " " +number);
-
     if(name == "" || email =="" || password==""||number=="" ){
-        
         alert("Por favor ingrese todos los datos");
-        
+        formulario.children[0].focus()  
+    }else{
+         //constructor de mi objeto
+        function user(name, email, password, number){
+            this.name=name;
+            this.email=email;
+            this.password=password;
+            this.number=number;
+        }
+
+        //se crea el objeto de usuario
+        newUser = new user(name,email,password,number);
+        console.log("objeto creado "+newUser);
+        agregar();
+        formulario.children[0].focus();
+        formulario.children[0].value="";
+        formulario.children[1].value="";
+        formulario.children[2].value="";
+        formulario.children[3].value="";
     }
+  
+}
 
-    if(name == password ){
-        alert("Recuerde que su contraseña no puede ser igual a su nombre");
-    }
-
-    else{
-
-       
-        document.getElementById("name").value="";
-        document.getElementById("email").value="";
-        document.getElementById("password").value="";
-        document.getElementById("number").value="";
-        alert("Registro exitoso");
-        document.getElementById("name").focus()
-    }       
+function agregar(){
+    dataUser.push(newUser);
+    console.log(dataUser);
 }
 
 
-
-function cleardata(){
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var number = document.getElementById("number").value;
-    
-    document.getElementById("name").value="";
-    document.getElementById("email").value="";
-    document.getElementById("password").value="";
-    document.getElementById("number").value="";
-    document.getElementById("name").focus()
-    
-}
-
-
-
-user=[{name:"Martin",   email:"martinpiste135@gmail.com", password:"12345"},
-      {name:"David",    email:"juan@gmail.com",           password:"juan"},
-      {name:"Juan",     email:"david@gmail.com",          password:"david"}];
 
 
 function login(){

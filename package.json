@@ -7,13 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/maincss.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
-
-
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martinpiste/Martinpiste.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Martinpiste/Martinpiste.github.io/issues"
+  },
+  "homepage": "https://github.com/Martinpiste/Martinpiste.github.io#readme"
 }

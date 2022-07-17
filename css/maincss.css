@@ -347,7 +347,7 @@ footer .copyright-text {
   padding: 0;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto  auto;
-  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
+  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
 
 /************************************************************/
 .store {
@@ -684,59 +684,6 @@ footer .copyright-text {
   background-color: #ffffff;
   display: flex;
   flex-direction: column; }
-  .contact h3 {
-    font-size: 24px;
-    letter-spacing: 0.6px;
-    line-height: 42px;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 10px;
-    background-color: white; }
-  .contact p {
-    font-size: 16px;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 20px; }
-  .contact form {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px; }
-    .contact form input {
-      height: 50px;
-      width: 326px;
-      max-width: 80%;
-      border-radius: 60px;
-      box-sizing: border-box;
-      border: 1px solid #3e3e3e;
-      border-right: none;
-      color: #3e3e3e;
-      font-family: Heebo;
-      font-size: 12px;
-      letter-spacing: 0.35px;
-      line-height: 21px;
-      padding-left: 22px; }
-    .contact form button {
-      height: 50px;
-      width: 155px;
-      max-width: 30%;
-      border-radius: 60px;
-      box-sizing: border-box;
-      background-color: var(--amarillo);
-      border: 1px solid var(--amarillo);
-      color: #FFF;
-      font-size: 12px;
-      letter-spacing: 0.35px;
-      line-height: 21px;
-      text-align: center;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin: 10px; }
-    .contact form button:hover {
-      color: var(--amarillo);
-      border: 1px solid var(--amarillo);
-      background-color: #FFF;
-      border: 1px solid #3E3e3e; }
   .contact .contact-main {
     background-color: #ffffff;
     width: 100%;
@@ -744,6 +691,63 @@ footer .copyright-text {
     padding-left: 10px; }
     .contact .contact-main img {
       width: 270px; }
+    .contact .contact-main h3 {
+      font-size: 24px;
+      letter-spacing: 0.6px;
+      line-height: 42px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 10px;
+      background-color: white; }
+    .contact .contact-main p {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 20px; }
+    .contact .contact-main form {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px 10px; }
+      .contact .contact-main form input {
+        height: 50px;
+        width: 326px;
+        max-width: 80%;
+        border-radius: 60px;
+        box-sizing: border-box;
+        border: 1px solid #3e3e3e;
+        border-right: none;
+        color: #3e3e3e;
+        font-family: Heebo;
+        font-size: 12px;
+        letter-spacing: 0.35px;
+        line-height: 21px;
+        padding-left: 22px;
+        margin: 0 auto;
+        margin-bottom: 10px; }
+      .contact .contact-main form button {
+        height: 50px;
+        width: 200px;
+        max-width: 30%;
+        border-radius: 60px;
+        box-sizing: border-box;
+        background-color: var(--amarillo);
+        border: 1px solid var(--amarillo);
+        color: #FFF;
+        font-size: 12px;
+        letter-spacing: 0.35px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 5px; }
+      .contact .contact-main form button:hover {
+        color: var(--amarillo);
+        border: 1px solid var(--amarillo);
+        background-color: #FFF;
+        border: 1px solid #3E3e3e; }
 
 /********************work*********************/
 .work-container {
@@ -816,7 +820,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   /********************about***************************/
   .container-about {
     max-width: 100%;
@@ -963,7 +967,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   /********************about***************************/
   .about {
     flex-direction: row; }

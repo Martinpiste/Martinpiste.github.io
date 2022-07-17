@@ -845,85 +845,92 @@ footer{
     flex-direction: column;
     
     
-    
-    h3 {
-        font-size: 24px;
-        letter-spacing: 0.6px;
-        line-height: 42px;
-        font-weight:normal;
-        margin-top:0;
-        margin-bottom:10px;
-        background-color: rgb(255, 255, 255);
-    }
-    
-    p {
-        font-size: 16px;
-        font-weight:normal;
-        margin-top:0;
-        margin-bottom:20px;
-    }
-    
-    form {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content:center;
-        padding: 10px 10px;
-        
-        input {
-            height: 50px;
-            width:326px;
-            max-width: 80%;
-            border-radius: 60px;
-            box-sizing: border-box;
-            border:1px solid #3e3e3e;
-            border-right: none;
-            color:#3e3e3e;
-            font-family: Heebo;
-            font-size: 12px;
-            letter-spacing: 0.35px;
-            line-height: 21px;
-            padding-left: 22px;
-        }
-        
-        button {
-            height: 50px;
-            width:155px;
-            max-width: 30%;
-            border-radius:  60px;
-            box-sizing: border-box;
-            background-color: var(--amarillo);
-            border:1px solid var(--amarillo);
-            color: #FFF;
-            font-size: 12px;
-            letter-spacing: 0.35px;
-            line-height: 21px;
-            text-align: center;
-            text-transform: uppercase;
-            cursor: pointer;
-            margin: 10px;  
-        }
+        .contact-main{
+            background-color: #ffffff;
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;  
+           
+            
+            img{
+                width: 270px;
+            }
+            h3 {
+                font-size: 24px;
+                letter-spacing: 0.6px;
+                line-height: 42px;
+                font-weight:normal;
+                margin-top:0;
+                margin-bottom:10px;
+                background-color: rgb(255, 255, 255);
+            }
+            
+            p {
+                font-size: 16px;
+                font-weight:normal;
+                margin-top:0;
+                margin-bottom:20px;
+            }
+            
+            form {
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                justify-content:space-around;
+                padding: 10px 10px;
+                
+                input {
+                    height: 50px;
+                    width:326px;
+                    max-width: 80%;
+                    border-radius: 60px;
+                    box-sizing: border-box;
+                    border:1px solid #3e3e3e;
+                    border-right: none;
+                    color:#3e3e3e;
+                    font-family: Heebo;
+                    font-size: 12px;
+                    letter-spacing: 0.35px;
+                    line-height: 21px;
+                    padding-left: 22px;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
 
-        button:hover {
-            color: var(--amarillo);
-            border:1px solid var(--amarillo);
-            background-color: #FFF;
-            border:1px solid #3E3e3e;
-        }
-    }
-    
-    
-    
-
-    .contact-main{
-        background-color: #ffffff;
-        width: 100%;
-        padding-right: 10px;
-        padding-left: 10px;   
+                }
+                
+                button {
+                    height: 50px;
+                    width:200px;
+                    max-width: 30%;
+                    border-radius:  60px;
+                    box-sizing: border-box;
+                    background-color: var(--amarillo);
+                    border:1px solid var(--amarillo);
+                    color: #FFF;
+                    font-size: 12px;
+                    letter-spacing: 0.35px;
+                    line-height: 21px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    margin: 0 auto; 
+                    margin-top: 5px; 
+                    
+                }
         
-        img{
-            width: 270px;
+                button:hover {
+                    color: var(--amarillo);
+                    border:1px solid var(--amarillo);
+                    background-color: #FFF;
+                    border:1px solid #3E3e3e;
+                }
+            }
         }
-    }
+    
+    
+    
+    
+    
 }
 
 /********************work*********************/
