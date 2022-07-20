@@ -4,6 +4,14 @@ miFormulario.addEventListener("submit",validarFormulario);
 
 let dataUser=[];
 
+//constructor de mi objeto
+function User(name, email, password, number){
+this.name=name;
+this.email=email;
+this.password=password;
+this.number=number;
+}
+
 function validarFormulario(e){
 
     e.preventDefault();
@@ -24,18 +32,11 @@ function validarFormulario(e){
         alert("Por favor ingrese todos los datos");
         formulario.children[0].focus()  
     }else{
-         //constructor de mi objeto
-        function user(name, email, password, number){
-            this.name=name;
-            this.email=email;
-            this.password=password;
-            this.number=number;
-        }
 
         //se crea el objeto de usuario
-        newUser = new user(name,email,password,number);
+        let newUser = new User(name,email,password,number);
         console.log("objeto creado "+newUser);
-        agregar();
+        agregar(newUser);
         localStorage.setItem("usuarios",JSON.stringify(dataUser));
         formulario.children[0].focus();
         formulario.children[0].value="";
@@ -48,8 +49,8 @@ function validarFormulario(e){
   
 }
 
-function agregar(){
-    dataUser.push(newUser);
+function agregar(User){
+    dataUser.push(User);
     console.log(dataUser);
    
 }

@@ -67,4 +67,37 @@ ggft
 
 }
 
+
+
+
+
+let addPro =document.getElementById("addpro")
+
+addPro.addEventListener("submit",addProduct);
+
+
+
+function showProd(){
+    if(id==lim){
+        
+    }
+}
+
+function addProduct(e){
+    e.preventDefault();
+    let carritoProd=e.target
+    console.log(carritoProd)
+    alert("Se agrego un producto")
+    let namePro  = carritoProd.children[1].innerHTML;
+    let pricePro = carritoProd.children[2].innerHTML;
+    let cantPro = document.getElementById("CntPro").value;
+    
+
+    console.log("Nombre: "+ namePro);
+    console.log("Precio " + pricePro);
+    console.log("Cantidad " + cantPro);
+
+
+
+}
    

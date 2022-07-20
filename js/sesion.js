@@ -15,7 +15,6 @@ let btnss= document.getElementById("btnss");
 
 if(usuarioStorage){
     usuario=usuarioStorage;
-    alert("Bienvenido " + usuario)
     modifSaludo()
 }
 else{
@@ -42,7 +41,6 @@ function sesionMP(e){
             console.log(user.password)
     
             if(user.email==correo && user.password== contra){
-                alert("Usted ya ha sido registrado")
                 usuario=user.name
                 console.log("el usuario con sesion se llama " + usuario);
                 localStorage.setItem("usuario",usuario)
@@ -54,7 +52,6 @@ function sesionMP(e){
                 break;
     
             }else{
-                alert("Los datos ingresados son incorrectos")
                 datosSesion.children[0].focus();
                 datosSesion.children[0].value="";
                 datosSesion.children[1].value="";
@@ -110,6 +107,10 @@ function modifSaludo(){
 
 function sesionClose(){
     localStorage.removeItem("usuario");
+    alert("Se ha serrado la sesion de " + usuario)
+    location.reload(); //Ayuda a refrescar la pagina
+    
+    
 }
 
 
