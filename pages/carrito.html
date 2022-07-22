@@ -146,153 +146,21 @@
         </nav>
         
         <div class="main-mp">
-            <section class="carrito">
-                <h2>Estos son sus articulos elejidos</h2>
-
-                <form>
-                    <button type="button" onClick="AddProduct()" class="btn btn-success" type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                          </svg>
-                    </button>
-                </form>
-
-                <hr>
-
-                <div class="product-slider">
-                    <div id="ContPro"class="container">
-
-
-                        <div class="product "> 
-
-                            <div class="product-picture">
-                                <img src="../image/melon.jpg" alt="product:Melon">
-                            </div>
-
-                            <div class="product-info"> 
-                               
-                                <h4 class="title" >Melon chino x kilo</h4>
-                                <h3 class="price"><span >$28.00</span></h3>
-
-                                <div class="price-detalle">
-                                    
-                                    <div>
-                                        <form action=""  >
-                                            <h5 class="title-cant">Cantidad</h5>
-                                            <input type="number" name="mel" id="mel" placeholder="0.00">
-                                        </form>
-                                    </div>
-
-                                    <div>
-                                        <form action="">
-                                            <h5 class="title-cant">Importe</h5>
-                                            <input type="number" name="number" placeholder="0.00" >
-                                        </form>
-                                    </div>
-
-                                    <div>
-                                        <form action="">
-                                            <button>X</button>
-                                        </form>                                        
-                                    </div>
-
-                                </div>    
-                                
-                                
-                            </div>
-                            
-                        </div>   
-
-
-
-                        <div class="product ">                     
-                            <div class="product-picture">
-                                <img src="../image/gala.jpg" alt="product:Manzana-gala">
-                            </div>
-                            <div class="product-info"> 
-                                <h4 class="title" >Manzana gala x kilo</h4>
-                                <h3 class="price">
-                                    <span>$70.00</span>
-                                </h3> 
-                                <div class="price-detalle">
-                                    <div>
-                                        <form action=""  >
-                                            <h5 class="title-cant">Cantidad</h5>
-                                            <input type="number" name="maga" id="maga" placeholder="0.00">
-                                        </form>
-                                    </div>
-                                    <div>
-                                        <form action="">
-                                            <h5 class="title-cant">Importe</h5>
-                                            <input type="number" name="number" placeholder="0.00">
-                                        </form>
-                                    </div>
-                                    <div>
-                                        <form action="">
-                                            <button>X</button>
-                                        </form>                                        
-                                    </div>
-                                </div>                               
-                            </div>
-                        </div>  
-
-
-                        <div class="product ">                     
-                            <div class="product-picture">
-                                <img src="../image/platano.JPG" alt="product:Platano">
-                            </div>
-                            <div class="product-info"> 
-                                <h4 class="title" >Platano x kilo</h4>
-                                <h3 class="price">
-                                    <span>$17.5</span>
-                                </h3> 
-                                <div class="price-detalle">
-                                    <div>
-                                        <form action=""  >
-                                            <h5 class="title-cant">Cantidad</h5>
-                                            <input type="number" name="plr" id="plr" placeholder="0.00">
-                                        </form>
-                                    </div>
-                                    <div>
-                                        <form action="">
-                                            <h5 class="title-cant">Importe</h5>
-                                            <input type="number" name="number" placeholder="0.00">
-                                        </form>
-                                    </div>
-                                    <div>
-                                        <form action="">
-                                            <button>X</button>
-                                        </form>                                        
-                                    </div>
-                                </div>                               
-                            </div>
-                        </div> 
-                        
-                        
-                        <div class="product "> 
-
-                            <div class="product-info"> 
-                                <h4 class="title" >Total</h4>
-                                <h3 class="price">
-                                    <span>$50.00</span>
-                                </h3> 
-                                <div class="pago">
-                                    <form action="">
-                                        <button onClick="total()"></button>
-                                    </form>                                        
-                                </div>
-                            
-                            </div>
-                        </div> 
-
-
-                    </div>
+            <section class="carrito" id="cardCart-Template">   
+                <div class="product-car">
+                    <form class="product-info" id=Proid="addpro" action="">
+                        <img class="product-picture" src="" alt="">
+                        <h5 class="categories">${depart}</h5>
+                        <h4 class="title" >${nombre}</h4>
+                        <h3 class="price"> $ ${precio}</h3> 
+                        <input type="number"  placeholder="0.00">
+                        <button class="button-mp" id="${x.id}" >Comprar</button>     
+                    </form>
                 </div>
-
-            </section>
+                
+            </section>   
         </div>
-
-
+            
 
         <footer class="footer-mp">
             <div class="bottom-nav">

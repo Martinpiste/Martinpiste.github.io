@@ -42,7 +42,7 @@ function sesionMP(e){
     
             if(user.email==correo && user.password== contra){
                 usuario=user.name
-                console.log("el usuario con sesion se llama " + usuario);
+               // console.log("el usuario con sesion se llama " + usuario);
                 localStorage.setItem("usuario",usuario)
     
                 datosSesion.children[0].focus();
@@ -107,7 +107,7 @@ function modifSaludo(){
 
 function sesionClose(){
     localStorage.removeItem("usuario");
-    alert("Se ha serrado la sesion de " + usuario)
+   // alert("Se ha serrado la sesion de " + usuario)
     location.reload(); //Ayuda a refrescar la pagina
     
     

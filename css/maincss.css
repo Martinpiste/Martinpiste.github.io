@@ -371,12 +371,16 @@ footer .copyright-text {
   padding: 0;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto  auto;
-  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
+  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
 
-/************************************************************/
+/*****************************************************/
 .store {
   padding-top: 20px;
-  background-color: #ffffff; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px 25px 25px 25px;
+  margin: auto; }
   .store h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-family: 'Lansdowne DEMO', sans-serif;
@@ -406,93 +410,97 @@ footer .copyright-text {
     padding-left: 22px;
     margin-bottom: 10px;
     text-align: center; }
-  .store .product-slider {
-    margin-top: 10x;
-    background-color: #ffffff7c; }
-    .store .product-slider .product {
-      border-radius: 10px;
-      border: 1px solid #DDD;
-      width: 33%;
-      text-align: center;
-      margin: 0 8px;
-      padding: 20px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-      background-color: white;
-      margin-top: 25px;
-      width: 250px; }
-      .store .product-slider .product img {
-        max-width: 100%;
-        height: 100px; }
-      .store .product-slider .product .product-info {
-        margin-top: 15px; }
-        .store .product-slider .product .product-info .categories {
-          color: var(--verde);
-          font-weight: normal;
-          font-size: 20px;
-          letter-spacing: 0.35px;
-          line-height: 30px;
-          margin-bottom: 8px;
-          margin-top: 0; }
-        .store .product-slider .product .product-info .title {
-          font-size: 20px;
-          letter-spacing: 0.5px;
-          line-height: 28px;
-          margin-bottom: 6px;
-          font-weight: normal;
-          margin-top: 0; }
-        .store .product-slider .product .product-info .price {
-          font-size: 28px;
-          font-weight: bold;
-          letter-spacing: 0.7px;
-          line-height: 30px;
-          margin-bottom: 10px;
-          margin-top: 0; }
-        .store .product-slider .product .product-info button {
-          height: 25px;
-          width: 70%;
-          border: 1px solid black;
-          background-color: white;
-          border-radius: 220px;
-          text-transform: uppercase;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.4px;
-          line-height: 14px; }
-        .store .product-slider .product .product-info button:hover {
-          background-color: var(--amarillo);
-          border: 1px solid var(--amarillo);
-          color: white;
-          cursor: pointer; }
-    .store .product-slider .product.offer::before {
-      content: "PROMOCION";
-      background-color: var(--rojo);
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      color: #FFF;
-      font-family: Heebo;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.35px;
-      line-height: 21px;
-      text-align: center;
-      padding: 4px 15px;
-      border-radius: 40px;
-      background-color: var(--verde); }
-  .store .container {
+  .store .product {
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    width: 33%;
+    text-align: center;
+    margin: 0 8px;
+    padding: 20px;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0px 25px 50px 25px;
-    background-color: rgba(255, 255, 255, 0.198); }
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: white;
+    margin: auto;
+    margin-top: 25px;
+    width: 250px;
+    background-color: #ffffff; }
+    .store .product img {
+      max-width: 100%;
+      height: 100px; }
+    .store .product .product-info {
+      margin-top: 15px; }
+      .store .product .product-info .categories {
+        color: var(--verde);
+        font-weight: normal;
+        font-size: 20px;
+        letter-spacing: 0.35px;
+        line-height: 30px;
+        margin-bottom: 8px;
+        margin-top: 0; }
+      .store .product .product-info .title {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 6px;
+        font-weight: normal;
+        margin-top: 0; }
+      .store .product .product-info .price {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        margin-top: 0; }
+      .store .product .product-info .button-mp {
+        height: 25px;
+        width: 70%;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 220px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        line-height: 14px; }
+      .store .product .product-info .button-mp:hover {
+        background-color: var(--amarillo);
+        border: 1px solid var(--amarillo);
+        color: white;
+        cursor: pointer; }
+  .store .product.offer::before {
+    content: "PROMOCION";
+    background-color: var(--rojo);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    text-align: center;
+    padding: 4px 15px;
+    border-radius: 40px;
+    background-color: var(--verde); }
+  .store .product-slider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 10px;
+    background-color: #000000; }
 
+/**********************carrito***********************/
 .carrito {
   padding-top: 20px;
-  background-color: #ffffff; }
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px 25px 25px 25px;
+  margin: auto; }
   .carrito h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-family: 'Lansdowne DEMO', sans-serif;
@@ -522,118 +530,86 @@ footer .copyright-text {
     padding-left: 22px;
     margin-bottom: 10px;
     text-align: center; }
-  .carrito .product-slider {
-    margin-top: 10x;
-    background-color: #ffffff7c; }
-    .carrito .product-slider .product {
-      border-radius: 10px;
-      border: 1px solid #DDD;
-      width: 100%;
-      text-align: center;
-      margin: 0 2px;
-      padding: 5px;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      cursor: pointer;
-      background-color: white;
-      margin-top: 25px;
-      width: 100%; }
-      .carrito .product-slider .product img {
-        max-width: 100%;
-        height: 50px;
-        border: 0%;
-        padding: 0%;
-        align-items: flex-end;
-        background-color: #3E3e3e; }
-      .carrito .product-slider .product .product-info {
-        display: flex;
-        flex-direction: row;
-        margin-top: 10px;
-        max-width: 100%;
-        margin-left: 0px;
-        margin-right: 0px; }
-        .carrito .product-slider .product .product-info .title {
-          font-size: 15px;
-          font-weight: bold;
-          letter-spacing: 0.1px;
-          line-height: 12px;
-          margin-bottom: 5px;
-          font-weight: normal;
-          margin-top: 0;
-          margin-right: 5%; }
-        .carrito .product-slider .product .product-info .price {
-          font-size: 15px;
-          font-weight: bold;
-          letter-spacing: 0.7px;
-          line-height: 28px;
-          margin-bottom: 10px;
-          margin-top: 0;
-          margin-right: 5%; }
-        .carrito .product-slider .product .product-info .price-detalle {
-          display: flex;
-          flex-direction: row; }
-        .carrito .product-slider .product .product-info .title-cant {
-          font-size: 10px;
-          font-weight: bold;
-          letter-spacing: 0.5px; }
-        .carrito .product-slider .product .product-info input {
-          font-size: 10px;
-          font-weight: bold;
-          width: 50px;
-          height: 25px; }
-        .carrito .product-slider .product .product-info button {
-          height: 25px;
-          width: 25px;
-          border: 1px solid black;
-          background-color: white;
-          border-radius: 220px;
-          text-transform: uppercase;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.4px;
-          line-height: 12px;
-          margin-left: 5px; }
-        .carrito .product-slider .product .product-info button:hover {
-          background-color: var(--amarillo);
-          border: 1px solid var(--amarillo);
-          color: white;
-          cursor: pointer; }
-        .carrito .product-slider .product .product-info .pago button {
-          height: 25px;
-          width: 60px;
-          border: 1px solid black;
-          background-color: white;
-          border-radius: 220px;
-          text-transform: uppercase;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.4px;
-          line-height: 12px;
-          margin-left: 5px; }
-    .carrito .product-slider .product.offer::before {
-      content: "PROMOCION";
-      background-color: var(--rojo);
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      color: #FFF;
-      font-family: Heebo;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.35px;
-      line-height: 21px;
-      text-align: center;
-      padding: 4px 15px;
-      border-radius: 40px;
-      background-color: var(--verde); }
-  .carrito .container {
+  .carrito .product-car {
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    width: 80%;
+    text-align: center;
+    margin: 0 8px;
+    padding: 20px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0px 8px 8px 8px;
-    background-color: rgba(255, 255, 255, 0.198); }
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: white;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #128c7e; }
+    .carrito .product-car img {
+      max-width: 100%;
+      height: 100px; }
+    .carrito .product-car .product-info {
+      margin-top: 15px; }
+      .carrito .product-car .product-info .categories {
+        color: var(--verde);
+        font-weight: normal;
+        font-size: 20px;
+        letter-spacing: 0.35px;
+        line-height: 30px;
+        margin-bottom: 8px;
+        margin-top: 0; }
+      .carrito .product-car .product-info .title {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 6px;
+        font-weight: normal;
+        margin-top: 0; }
+      .carrito .product-car .product-info .price {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        margin-top: 0; }
+      .carrito .product-car .product-info .button-mp {
+        height: 25px;
+        width: 70%;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 220px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        line-height: 14px; }
+      .carrito .product-car .product-info .button-mp:hover {
+        background-color: var(--amarillo);
+        border: 1px solid var(--amarillo);
+        color: white;
+        cursor: pointer; }
+  .carrito .product.offer::before {
+    content: "PROMOCION";
+    background-color: var(--rojo);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    text-align: center;
+    padding: 4px 15px;
+    border-radius: 40px;
+    background-color: var(--verde); }
+  .carrito .product-slider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 10px;
+    background-color: #000000; }
 
 /********************about***************************/
 .container-about {
@@ -844,7 +820,12 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+  .store {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap; }
   /********************about***************************/
   .container-about {
     max-width: 100%;
@@ -991,7 +972,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   /********************about***************************/
   .about {
     flex-direction: row; }
