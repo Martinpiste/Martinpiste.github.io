@@ -1,9 +1,14 @@
-let card = document.getElementById("cardProd-Template");
+let card = document.getElementById("cardProd-Template") //posicion a colocar mis tarjetas d productos
+let items = document.getElementById('items')
+let footer = document.getElementById('footer')
+
+
+let compra =document.getElementById("cardProd-Template") //evento deboton de las tarjetas colocadas
+let templateCarrito=document.getElementById("template-carrito").content;
+let templateFooter=document.getElementById("template-carrito").content;
+let fragment = document.createDocumentFragment()
+
 let carrito = {};
-let compra =document.getElementById("cardProd-Template");
-
-
-
 
 compra.addEventListener('click',addCarrito)
 class product{
@@ -56,17 +61,15 @@ products.map((x)=>{
             <img class="product-picture" src="${x.img}" alt="${x.name.toLocaleUpperCase()}">
             <h5 class="categories">${depart}</h5>
             <h4 class="title" >${nombre}</h4>
-            <h3 class="price"> $ ${precio}</h3> 
+            <h3 >$ <span class="price">${precio}</span> </h3> 
             <input type="number"  placeholder="0.00">
             <button class="button-mp" id="${x.id}" >Comprar</button>     
         </form>
     </div>
     `;
 
-    console.log(x.img)
+   // console.log(x.img)
 })
-
-
 
 
 
@@ -88,7 +91,9 @@ function setCarrito(objeto){
     const producto ={
         id:objeto.querySelector('.button-mp').id,
         title:objeto.querySelector('h4').textContent,
-        price:objeto.querySelector('h3').textContent,
+        price:objeto.querySelector('span').textContent,
+        
+        
         quantity:Number(objeto.querySelector('input').value), 
     }
 
@@ -98,30 +103,71 @@ function setCarrito(objeto){
 
     carrito[producto.id] = {...producto}
     //console.log(carrito)
-    pintarCarrito()
+    
+    //pintarCarrito()
+    createCar()
 }
 
+function createCar(){
+    
+    items.innerHTML = '' //limpia para que no se repita articulos cada que se agregue uno igual
 
-const pintarCarrito = () => {
-    console.log(carrito)
-    Object.values(carrito).forEach(producto => {
-
-        /*templateCarrito.querySelector('th').textContent = producto.id
+    Object.values(carrito).forEach(producto=> {
+       
+        templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.title
-        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
-        templateCarrito.querySelector('span').textContent = producto.precio * producto.cantidad
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.quantity
+        let ttl = producto.price *producto.quantity;
+        templateCarrito.querySelector('span').textContent = ttl.toFixed(2);
         
         //botones
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
-        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id */
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
 
+        const clone = templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
     })
 
+    items.appendChild(fragment)
+    pintarFooter()
 }
 
+const pintarFooter = () => {
+    footer.innerHTML = ''
+    
+    
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        `
+        return
+    }
+    
+    // sumar cantidad y sumar totales
+    let nCantidad = Object.values(carrito).reduce((acc, { quantity }) => acc + quantity, 0)
+    let nPrecio = Object.values(carrito).reduce((acc, {quantity, price}) => acc + quantity * price ,0)
+    console.log("Cantidad " + nCantidad)
+    console.log("Importe total " + nPrecio)
 
+  /*  templateFooter.querySelector('th').textContent="Total"
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelectorAll('td')[1].textContent =""
+    templateFooter.querySelector('span').textContent = nPrecio
 
+   
+    
+    const clone = templateFooter.cloneNode(true)
+    fragment.appendChild(clone)
 
+    footer.appendChild(fragment)
+
+    const boton = document.querySelector('#vaciar-carrito')
+    boton.addEventListener('click', () => {
+        carrito = {}
+        pintarCarrito()
+    })*/
+
+}
 
 
 
