@@ -516,7 +516,7 @@ footer .copyright-text {
     width: 66px; }
   .carrito form input {
     height: 30px;
-    width: 50%;
+    width: 10%;
     max-width: 80%;
     border-radius: 10px;
     box-sizing: border-box;
@@ -533,24 +533,25 @@ footer .copyright-text {
   .carrito .product-car {
     border-radius: 10px;
     border: 1px solid #DDD;
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: 0 8px;
     padding: 20px;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
+    flex-direction: row;
     background-color: white;
     margin: auto;
     margin-top: 25px;
-    background-color: #128c7e; }
+    background-color: #128c7e;
+    overflow: hidden; }
     .carrito .product-car img {
       max-width: 100%;
       height: 100px; }
     .carrito .product-car .product-info {
-      margin-top: 15px; }
+      margin: auto;
+      display: flex;
+      flex-direction: row; }
       .carrito .product-car .product-info .categories {
         color: var(--verde);
         font-weight: normal;
@@ -558,24 +559,27 @@ footer .copyright-text {
         letter-spacing: 0.35px;
         line-height: 30px;
         margin-bottom: 8px;
-        margin-top: 0; }
+        margin-top: 0;
+        margin-right: 15px; }
       .carrito .product-car .product-info .title {
         font-size: 20px;
         letter-spacing: 0.5px;
         line-height: 28px;
         margin-bottom: 6px;
         font-weight: normal;
-        margin-top: 0; }
+        margin-top: 0;
+        margin-right: 15px; }
       .carrito .product-car .product-info .price {
         font-size: 28px;
         font-weight: bold;
         letter-spacing: 0.7px;
         line-height: 30px;
         margin-bottom: 10px;
-        margin-top: 0; }
+        margin-top: 0;
+        margin-right: 15px; }
       .carrito .product-car .product-info .button-mp {
         height: 25px;
-        width: 70%;
+        width: 20%;
         border: 1px solid black;
         background-color: white;
         border-radius: 220px;
@@ -583,7 +587,8 @@ footer .copyright-text {
         font-size: 10px;
         font-weight: 700;
         letter-spacing: 0.4px;
-        line-height: 14px; }
+        line-height: 14px;
+        margin-right: 15px; }
       .carrito .product-car .product-info .button-mp:hover {
         background-color: var(--amarillo);
         border: 1px solid var(--amarillo);

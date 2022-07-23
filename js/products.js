@@ -1,6 +1,11 @@
-
+let card = document.getElementById("cardProd-Template");
 let carrito = {};
+let compra =document.getElementById("cardProd-Template");
 
+
+
+
+compra.addEventListener('click',addCarrito)
 class product{
     constproduct(id,name, price, stock, department){
         this.id     =id.toLowerCase();
@@ -33,7 +38,7 @@ const products = [  {id:"plr",      name:"platano roatan",  price:19.5,   stock:
 
 const ids=products.map((el)=> el.id)
 
-let card = document.getElementById("cardProd-Template");
+
 
 
 products.map((x)=>{
@@ -62,8 +67,8 @@ products.map((x)=>{
 })
 
 
-let compra =document.getElementById("cardProd-Template");
-compra.addEventListener('click',addCarrito)
+
+
 
 function addCarrito(e){
     e.preventDefault();
@@ -92,8 +97,34 @@ function setCarrito(objeto){
     }
 
     carrito[producto.id] = {...producto}
-    console.log(carrito)
+    //console.log(carrito)
+    pintarCarrito()
 }
+
+
+const pintarCarrito = () => {
+    console.log(carrito)
+    Object.values(carrito).forEach(producto => {
+
+        /*templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('span').textContent = producto.precio * producto.cantidad
+        
+        //botones
+        templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id */
+
+    })
+
+}
+
+
+
+
+
+
+
 
 
 
