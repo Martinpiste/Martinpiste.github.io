@@ -1,8 +1,9 @@
 
 let miFormulario =document.getElementById("formulario-mp")
 miFormulario.addEventListener("submit",validarFormulario);
+let dataUser = JSON.parse(localStorage.getItem('usuarios')) || [];
+//let dataUser=[];
 
-let dataUser=[];
 
 //constructor de mi objeto
 function User(name, email, password, number){
