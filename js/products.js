@@ -8,7 +8,27 @@ let templateCarrito=document.getElementById("template-carrito").content;
 let templateFooter=document.getElementById("template-footer").content;
 let fragment = document.createDocumentFragment()
 
-let carrito = {};
+let carrito = [];
+
+//let carrito= JSON.parse(localStorage.getItem('carrFull')) || [];
+
+/*
+let carritoActivo=localStorage.getItem("carrito")
+
+if(carritoActivo){
+    carrito=carritoActivo
+    createCar()
+}else{
+    alert("Aprovecha las ofertas, Compra ahora!!")
+}
+
+document.addEventListener('DOMContentLoaded', e => {
+    
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        createCar()
+    }
+*/
 
 compra.addEventListener('click',addCarrito)
 class product{
@@ -21,6 +41,7 @@ class product{
 
     } 
 }
+
 
 
 const products = [  {id:"plr",      name:"platano roatan",  price:19.5,   stock:18,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
@@ -67,8 +88,6 @@ products.map((x)=>{
         </form>
     </div>
     `;
-
-   // console.log(x.img)
 })
 
 
@@ -136,6 +155,8 @@ function createCar(){
 
     items.appendChild(fragment)
     pintarFooter()
+    localStorage.setItem("carrFull",JSON.stringify(carrito))
+    console.log("ya se guardo el carrito "+ carrFull)
 }
 
 const pintarFooter = () => {
@@ -179,7 +200,10 @@ function btnAccion(e){
     if(e.target.classList.contains('btn-danger')){
         let producto = carrito[e.target.dataset.id]
         producto.quantity--
-        carrito[e.target.dataset.id]={...producto}
+        if(producto.quantity <= 0){
+            delete carrito[e.target.dataset.id]
+        }
+       
         createCar()
     }
 
