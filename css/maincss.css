@@ -57,6 +57,54 @@
   background-color: #FFF;
   border: 1px solid #3E3e3e; }
 
+.boton-mp-sm1 {
+  height: 30px;
+  width: 150px;
+  max-width: 30%;
+  border-radius: 90px;
+  box-sizing: border-box;
+  background-color: var(--amarillo);
+  border: 1px solid var(--amarillo);
+  color: #FFF;
+  font-size: 12px;
+  letter-spacing: 0.35px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 5px; }
+
+.boton-mp-sm1:hover {
+  color: var(--amarillo);
+  border: 1px solid var(--amarillo);
+  background-color: #FFF;
+  border: 1px solid #3E3e3e; }
+
+.boton-mp-sm2 {
+  height: 30px;
+  width: 150px;
+  max-width: 30%;
+  border-radius: 90px;
+  box-sizing: border-box;
+  background-color: var(--amarillo);
+  border: 1px solid var(--amarillo);
+  color: #FFF;
+  font-size: 12px;
+  letter-spacing: 0.35px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 5px; }
+
+.boton-mp-sm2:hover {
+  color: var(--amarillo);
+  border: 1px solid var(--amarillo);
+  background-color: #FFF;
+  border: 1px solid #3E3e3e; }
+
 section.start {
   border: 0;
   position: relative;
@@ -371,7 +419,7 @@ footer .copyright-text {
   padding: 0;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto  auto;
-  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
+  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
 
 /*****************************************************/
 .store {
@@ -825,7 +873,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   .store {
     display: flex;
     flex-wrap: nowrap;
@@ -977,7 +1025,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   /********************about***************************/
   .about {
     flex-direction: row; }

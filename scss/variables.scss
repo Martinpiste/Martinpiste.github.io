@@ -63,7 +63,64 @@
     
 }
 
+
 .boton-mp:hover {
+    color: var(--amarillo);
+    border:1px solid var(--amarillo);
+    background-color: #FFF;
+    border:1px solid #3E3e3e;
+}
+
+.boton-mp-sm1 {
+    height: 30px;
+    width:150px;
+    max-width: 30%;
+    border-radius:  90px;
+    box-sizing: border-box;
+    background-color: var(--amarillo);
+    border:1px solid var(--amarillo);
+    color: #FFF;
+    font-size: 12px;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto; 
+    margin-top: 5px; 
+    
+}
+
+
+.boton-mp-sm1:hover {
+    color: var(--amarillo);
+    border:1px solid var(--amarillo);
+    background-color: #FFF;
+    border:1px solid #3E3e3e;
+}
+
+.boton-mp-sm2 {
+    height: 30px;
+    width:150px;
+    max-width: 30%;
+    border-radius:  90px;
+    box-sizing: border-box;
+    background-color: var(--amarillo);
+    border:1px solid var(--amarillo);
+    color: #FFF;
+    font-size: 12px;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto; 
+    margin-top: 5px; 
+    
+}
+
+
+.boton-mp-sm2:hover {
     color: var(--amarillo);
     border:1px solid var(--amarillo);
     background-color: #FFF;

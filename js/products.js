@@ -5,7 +5,7 @@ let footer = document.getElementById('footer')
 
 let compra =document.getElementById("cardProd-Template") //evento deboton de las tarjetas colocadas
 let templateCarrito=document.getElementById("template-carrito").content;
-let templateFooter=document.getElementById("template-carrito").content;
+let templateFooter=document.getElementById("template-footer").content;
 let fragment = document.createDocumentFragment()
 
 let carrito = {};
@@ -108,6 +108,11 @@ function setCarrito(objeto){
     createCar()
 }
 
+items.addEventListener('click',e =>{
+    btnAccion(e)
+
+})
+
 function createCar(){
     
     items.innerHTML = '' //limpia para que no se repita articulos cada que se agregue uno igual
@@ -117,8 +122,9 @@ function createCar(){
         templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.title
         templateCarrito.querySelectorAll('td')[1].textContent = producto.quantity
+        templateCarrito.querySelectorAll('span')[0].textContent = producto.price
         let ttl = producto.price *producto.quantity;
-        templateCarrito.querySelector('span').textContent = ttl.toFixed(2);
+        templateCarrito.querySelectorAll('span')[1].textContent = ttl.toFixed(2);
         
         //botones
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
@@ -134,11 +140,9 @@ function createCar(){
 
 const pintarFooter = () => {
     footer.innerHTML = ''
-    
-    
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
         `
         return
     }
@@ -149,24 +153,37 @@ const pintarFooter = () => {
     console.log("Cantidad " + nCantidad)
     console.log("Importe total " + nPrecio)
 
-  /*  templateFooter.querySelector('th').textContent="Total"
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad
-    templateFooter.querySelectorAll('td')[1].textContent =""
     templateFooter.querySelector('span').textContent = nPrecio
 
-   
-    
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
-
     footer.appendChild(fragment)
+    let btnVaciar =document.getElementById("vaciar-carrito")
+    btnVaciar.addEventListener('click',()=>{
+        carrito={}
+        createCar()
+    })
+}
 
-    const boton = document.querySelector('#vaciar-carrito')
-    boton.addEventListener('click', () => {
-        carrito = {}
-        pintarCarrito()
-    })*/
+function btnAccion(e){
+    //console.log(e.target)
+    if(e.target.classList.contains('btn-info')){
+        //console.log(carrito[e.target.dataset.id])
+        let producto = carrito[e.target.dataset.id]
+        producto.quantity++
+        carrito[e.target.dataset.id]={...producto}
+        createCar()
+    }
 
+    if(e.target.classList.contains('btn-danger')){
+        let producto = carrito[e.target.dataset.id]
+        producto.quantity--
+        carrito[e.target.dataset.id]={...producto}
+        createCar()
+    }
+
+    e.stopPropagation()
 }
 
 
