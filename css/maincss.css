@@ -419,7 +419,7 @@ footer .copyright-text {
   padding: 0;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto  auto;
-  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
+  grid-template-areas: "header-mp " "navbar-mp" "main-mp" "footer-mp"; }
 
 /*****************************************************/
 .store {
@@ -873,7 +873,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   .store {
     display: flex;
     flex-wrap: nowrap;
@@ -1025,7 +1025,7 @@ footer .copyright-text {
     padding: 0;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto auto  auto;
-    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
+    grid-template-areas: "header-mp header-mp" "navbar-mp main-mp" "navbar-mp main-mp" "footer-mp  footer-mp"; }
   /********************about***************************/
   .about {
     flex-direction: row; }

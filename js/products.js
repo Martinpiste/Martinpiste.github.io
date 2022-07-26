@@ -8,9 +8,14 @@ let templateCarrito=document.getElementById("template-carrito").content;
 let templateFooter=document.getElementById("template-footer").content;
 let fragment = document.createDocumentFragment()
 
-let carrito = [];
+//let carrito = {};
 
-//let carrito= JSON.parse(localStorage.getItem('carrFull')) || [];
+let carrito= JSON.parse(localStorage.getItem('carrito')) || {};
+
+if (localStorage.getItem('carrito')) {
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    createCar()
+}
 
 /*
 let carritoActivo=localStorage.getItem("carrito")
@@ -119,11 +124,8 @@ function setCarrito(objeto){
     if(carrito.hasOwnProperty(producto.id)){
         producto.quantity = carrito[producto.id].quantity + 1
     }
-
     carrito[producto.id] = {...producto}
-    //console.log(carrito)
-    
-    //pintarCarrito()
+    localStorage.setItem("carrito",JSON.stringify(carrito))
     createCar()
 }
 
@@ -132,6 +134,7 @@ items.addEventListener('click',e =>{
 
 })
 
+//*******************GUARDA CARRITO ********************************/
 function createCar(){
     
     items.innerHTML = '' //limpia para que no se repita articulos cada que se agregue uno igual
@@ -155,11 +158,11 @@ function createCar(){
 
     items.appendChild(fragment)
     pintarFooter()
-    localStorage.setItem("carrFull",JSON.stringify(carrito))
-    console.log("ya se guardo el carrito "+ carrFull)
+   // localStorage.setItem("carrito",JSON.stringify(carrito))
+  //  console.log(carrito)
 }
-
-const pintarFooter = () => {
+/****************************************************************************** */
+function pintarFooter () {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
@@ -180,8 +183,10 @@ const pintarFooter = () => {
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
     footer.appendChild(fragment)
+
     let btnVaciar =document.getElementById("vaciar-carrito")
     btnVaciar.addEventListener('click',()=>{
+        localStorage.removeItem("carrito")
         carrito={}
         createCar()
     })
@@ -202,6 +207,8 @@ function btnAccion(e){
         producto.quantity--
         if(producto.quantity <= 0){
             delete carrito[e.target.dataset.id]
+        } else {
+            carrito[e.target.dataset.id] = {...producto}
         }
        
         createCar()
