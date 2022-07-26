@@ -19,7 +19,52 @@ if(usuarioStorage){
 }
 else{
  
-    alert("Aun no inicias sesion")
+   // alert("Aun no inicias sesion")
+
+   const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: 'btn btn-success',
+      cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
+  })
+  
+  swalWithBootstrapButtons.fire({
+    title: 'Aun no inicias sesion!',
+    text: "Quieres iniciar sesio?",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Si, si quiero!',
+    cancelButtonText: 'No, no me interesa!',
+    reverseButtons: true,
+    
+    
+  }).then((result) => {
+    
+    if (result.isConfirmed) {
+        icon: 'info',
+      swalWithBootstrapButtons.fire(
+        
+        'Ingrese los datos correspondientes!',
+        'Aproveche las ofertas.',
+        'info'
+      )
+    } else if (result.dismiss === Swal.DismissReason.cancel)
+     {
+        Swal.fire({
+           
+            title: 'No deje pasar los grandes beneficios',
+            text: 'Registrese ya :)',
+            icon: 'question',
+            showConfirmButton: false,
+            timer: 5000,
+            showCloseButton: true
+          })
+    }
+    
+   
+  })
+  
 
 }
 
@@ -47,18 +92,48 @@ function sesionMP(e){
     
                 datosSesion.children[0].focus();
                 datosSesion.children[0].value="";
-                datosSesion.children[1].value="";    
+                datosSesion.children[1].value="";   
+                
+                Swal.fire({
+                    title: `Bienvenido/a ${usuario}, Gracias por su preferencia `,
+                    width: 600,
+                    padding: '3em',
+                    color: '#6BA43A',
+                    background: '#fff url(/images/trees.png)',
+                    backdrop: `
+                      rgba(0,125,0,0.4)
+                      left top
+                      no-repeat
+                    `
+                  })
+                
                 modifSaludo()
                 break;
     
             }else{
+               // alert("INgresa los datos");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Los datos son incorrectos!',
+                    //footer: '<a href="">Why do I have this issue?</a>'
+                  })
+               
                 datosSesion.children[0].focus();
                 datosSesion.children[0].value="";
                 datosSesion.children[1].value="";
+                break;
+                
             }
         }      
     }else{
-        alert("Usuario no existente")
+        //alert("Usuario no existente")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El usuario no existente!',
+            //footer: '<a href="">Why do I have this issue?</a>'
+          })
     }
       
 

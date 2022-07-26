@@ -134,7 +134,7 @@ items.addEventListener('click',e =>{
 
 })
 
-//*******************GUARDA CARRITO ********************************/
+
 function createCar(){
     
     items.innerHTML = '' //limpia para que no se repita articulos cada que se agregue uno igual
@@ -158,10 +158,9 @@ function createCar(){
 
     items.appendChild(fragment)
     pintarFooter()
-   // localStorage.setItem("carrito",JSON.stringify(carrito))
-  //  console.log(carrito)
+
 }
-/****************************************************************************** */
+
 function pintarFooter () {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
@@ -177,8 +176,8 @@ function pintarFooter () {
     console.log("Cantidad " + nCantidad)
     console.log("Importe total " + nPrecio)
 
-    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
-    templateFooter.querySelector('span').textContent = nPrecio
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad.toFixed(2);
+    templateFooter.querySelector('span').textContent = nPrecio.toFixed(2);
 
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
@@ -253,42 +252,10 @@ function filterproduct(){
     searchArticle=searchArticle.toLowerCase();
     alert(searchArticle)
 
-ggft
+
     let filtrado = products.filter( elementof => elementof.department.includes(searchArticle));
     console.log(filtrado);
     
 
 }
 
-/*
-
-let addPro =document.getElementById("addpro")
-
-addPro.addEventListener("submit",addProduct);
-
-
-
-function showProd(){
-    if(id==lim){
-        
-    }
-}
-
-function addProduct(e){
-    e.preventDefault();
-    let carritoProd=e.target
-    console.log(carritoProd)
-    alert("Se agrego un producto")
-    let namePro  = carritoProd.children[1].innerHTML;
-    let pricePro = carritoProd.children[2].innerHTML;
-    let cantPro = document.getElementById("CntPro").value;
-    
-
-    console.log("Nombre: "+ namePro);
-    console.log("Precio " + pricePro);
-    console.log("Cantidad " + cantPro);
-
-
-
-}
-   */

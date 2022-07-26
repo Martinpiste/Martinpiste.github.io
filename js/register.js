@@ -30,7 +30,12 @@ function validarFormulario(e){
 
     
     if(name == "" || email =="" || password==""||number=="" ){
-        alert("Por favor ingrese todos los datos");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Aun no ingresa todos los datos!',
+            //footer: '<a href="">Why do I have this issue?</a>'
+          })
         formulario.children[0].focus()  
     }else{
 
@@ -44,16 +49,20 @@ function validarFormulario(e){
         formulario.children[1].value="";
         formulario.children[2].value="";
         formulario.children[3].value="";
-
-        
+        Swal.fire({
+           // position: 'top-end',
+            icon: 'success',
+            title: 'Registro exitoso',
+            showConfirmButton: false,
+            timer: 1850
+          })
     }
   
 }
 
 function agregar(User){
     dataUser.push(User);
-    console.log(dataUser);
-   
+    console.log(dataUser); 
 }
 
 
