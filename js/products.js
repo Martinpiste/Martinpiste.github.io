@@ -17,25 +17,7 @@ if (localStorage.getItem('carrito')) {
     createCar()
 }
 
-/*
-let carritoActivo=localStorage.getItem("carrito")
 
-if(carritoActivo){
-    carrito=carritoActivo
-    createCar()
-}else{
-    alert("Aprovecha las ofertas, Compra ahora!!")
-}
-
-document.addEventListener('DOMContentLoaded', e => {
-    
-    if (localStorage.getItem('carrito')) {
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        createCar()
-    }
-*/
-
-compra.addEventListener('click',addCarrito)
 class product{
     constproduct(id,name, price, stock, department){
         this.id     =id.toLowerCase();
@@ -67,7 +49,7 @@ const products = [  {id:"plr",      name:"platano roatan",  price:19.5,   stock:
                                        
 ];
 
-const ids=products.map((el)=> el.id)
+//const ids=products.map((el)=> el.id)
 
 
 
@@ -96,10 +78,11 @@ products.map((x)=>{
 })
 
 
+compra.addEventListener('click',addCarrito)
 
 function addCarrito(e){
     e.preventDefault();
-    let dataCart=e.target
+    
     if(e.target.classList.contains('button-mp')){        
         setCarrito(e.target.parentElement)
     }
@@ -112,6 +95,8 @@ function setCarrito(objeto){
     if(objeto.querySelector('input').value == 0){
         objeto.querySelector('input').value=1
     }
+
+
     const producto ={
         id:objeto.querySelector('.button-mp').id,
         title:objeto.querySelector('h4').textContent,
@@ -129,10 +114,7 @@ function setCarrito(objeto){
     createCar()
 }
 
-items.addEventListener('click',e =>{
-    btnAccion(e)
 
-})
 
 
 function createCar(){
@@ -191,6 +173,11 @@ function pintarFooter () {
     })
 }
 
+items.addEventListener('click',e =>{
+    btnAccion(e)
+
+})
+
 function btnAccion(e){
     //console.log(e.target)
     if(e.target.classList.contains('btn-info')){
@@ -218,24 +205,56 @@ function btnAccion(e){
 
 
 
+/************************BUSCADOR-FILTRO******************************** */
+
+let searchArticle = document.getElementById("search");
+//searchArticle=searchArticle.toLowerCase();
 
 
+searchArticle.addEventListener('click',es =>{
+    buscar(es)
 
+})
 
+function buscar(es){ 
+    let article=searchArticle.querySelector('input').value
+    article=article.toLowerCase()
+    console.log(article)
 
-
-function searchproduct(){
-    var searchArticle = document.getElementById("search").value;
-    searchArticle=searchArticle.toLowerCase();
-    alert(searchArticle)
-
-    let search = products.find(elemento => elemento.name === searchArticle);
-   alert('El precio de '+ search.name + ' es de ' + '$'+search.price);
-  
+    if(article){
+        let resultado=products.filter((el)=>el.name.includes(article))
+        console.log(resultado)        
+        let res = resultado.map(pro=>pro.name )
+        let pre = resultado.map(pro2=>pro2.price)
+        Swal.fire({
+            icon: 'info',
+            title: 'Productos encontrados',
+            text: res +" " + "$ "+pre,
+            
+            footer: 'Encontro lo que buscaba?'
+          })    
+    }
+    searchArticle.querySelector('input').value=""
 }
+
+
+
+let dropValue =document.getElementById("drop-departamento")
+dropValue.addEventListener('click', dv=>{
+    filterproduct(dv)
+})
+   
+
 
 function filterproduct(){
 
+    let filtrado = products.filter( elementof => elementof.department.includes("platano"));
+    console.log(filtrado);
+
+    
+    console.log(dropValue.querySelectorAll('a').textContent)
+   
+/*
     var searchArticle = document.getElementById("filter1").textContent;
     searchArticle=searchArticle.toLowerCase();
     alert(searchArticle)
@@ -251,11 +270,7 @@ function filterproduct(){
     var searchArticle = document.getElementById("filter4").textContent;
     searchArticle=searchArticle.toLowerCase();
     alert(searchArticle)
-
-
-    let filtrado = products.filter( elementof => elementof.department.includes(searchArticle));
-    console.log(filtrado);
+*/
     
-
 }
 
