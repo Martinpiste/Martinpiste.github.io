@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/Martinpiste/Martinpiste.github.io/issues"
   },
-  "homepage": "https://github.com/Martinpiste/Martinpiste.github.io#readme"
+  "homepage": "https://github.com/Martinpiste/Martinpiste.github.io#readme",
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "node-fetch": "^3.2.10"
+  }
 }

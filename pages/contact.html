@@ -109,13 +109,16 @@
                     <p>Registrate ahora y no te pierdas la mejores ofertas!</p>
                     <div>
                         <form id="formulario-mp">
-                            <input  type="text"      placeholder="Ingrese su nombre">
-                            <input  type="email"     placeholder="Ingrese su email">
-                            <input  type="password"  placeholder="Ingrese una contraseña">
-                            <input  type="number"    placeholder="Ingrese su numero telefonico">
-                            <button type="submit" >Enviar</button>
+                            <input  type="text"      placeholder="Ingrese su nombre" required>
+                            <input  type="email"     placeholder="Ingrese su email" required >
+                            <input  type="password"  placeholder="Ingrese una contraseña" required>
+                            <input  type="number"    placeholder="Ingrese su numero telefonico" required>
+                           
+                            <input class="boton-mp  "type="submit" id="button" value="ENVIAR MENSAJE"></input>
                            
                           </form>
+                            <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                            <script type="text/javascript">emailjs.init('LUECm8vFESi6H-Hb0')</script>
                       
                     </div>     
                 </div>

@@ -1,0 +1,20 @@
+
+
+[
+    {"id":"plr",     "name":"platano roatan",   "price":19.5,      "stock":18,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"plmz",    "name":"platano manzano",  "price":28.00,     "stock":15,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"mel",     "name":"melon chino",      "price":28.00,     "stock":15,     "department":"frutas y verduras"  ,"img":"../image/melon.jpg"},
+    {"id":"lim",     "name":"limon persa",      "price":10.00,     "stock":18,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"mar",     "name":"manzana roja",     "price":28.00,     "stock":20,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"canr",    "name":"canela",           "price":460.00,    "stock":3,      "department":"condimentos"        ,"img":"../image/platano.jpg"},
+    {"id":"855",     "name":"platos-855",       "price":35.00,     "stock":20,     "department":"desechables"        ,"img":"../image/platano.jpg"},
+    {"id":"cilp",    "name":"cilantro",         "price":60.00,     "stock":20,     "department":"hierbas"            ,"img":"../image/platano.jpg"},
+    {"id":"vs10",    "name":"vaso#10",          "price":45.00,     "stock":20,     "department":"desechables"        ,"img":"../image/platano.jpg"},
+    {"id":"lrl",     "name":"lechuga romana",   "price":19.50,     "stock":24,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"chh",     "name":"habanero",         "price":98.00,     "stock":30,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"sdk",     "name":"sandia",           "price":9.50,      "stock":456,    "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"nad",     "name":"naranja dulce",    "price":12.00,     "stock":18,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"pia",     "name":"pina",             "price":32.00,     "stock":15,     "department":"frutas y verduras"  ,"img":"../image/platano.jpg"},
+    {"id":"uvr",     "name":"uva roja",         "price":100.00,    "stock":8,      "department":"frutas y verduras"  ,"img":"../image/platano.jpg"}
+                                       
+]

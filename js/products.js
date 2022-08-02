@@ -1,4 +1,4 @@
-let card = document.getElementById("cardProd-Template") //posicion a colocar mis tarjetas d productos
+const card = document.getElementById("cardProd-Template") //posicion a colocar mis tarjetas d productos
 let items = document.getElementById('items')
 let footer = document.getElementById('footer')
 
@@ -17,64 +17,36 @@ if (localStorage.getItem('carrito')) {
     createCar()
 }
 
+fetch("/articulos.json") //hacer peticion
+.then((res)=>res.json())
+.then((productos)=>{
+    productos.forEach((producto) => {
 
-class product{
-    constproduct(id,name, price, stock, department){
-        this.id     =id.toLowerCase();
-        this.name   = name.toLowerCase();
-        this.price  = parseFloat(price);
-        this.stock  =stock;
-        this.department =department.toLowerCase();
+        let li =document.createElement("li")
 
-    } 
-}
+        let nombre0=producto.name[0].toLocaleUpperCase();
+        let nombre1=producto.name.slice(1);
+        let nombre= nombre0+nombre1;
+        let precio=producto.price.toFixed(2);
+        let depart0=producto.department[0].toLocaleUpperCase();
+        let depart1=producto.department.slice(1);
+        let depart=depart0+depart1;
 
-
-
-const products = [  {id:"plr",      name:"platano roatan",  price:19.5,   stock:18,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"plmz",     name:"platano manzano", price:28.00,     stock:15,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"mel",      name:"melon chino",     price:28.00,     stock:15,     department:"frutas y verduras"  ,img:'../image/melon.jpg'},
-                    {id:"lim",     name:"limon persa",      price:10.00,     stock:18,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"mar",     name:"manzana roja",     price:28.00,     stock:20,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"canr",    name:"canela",           price:460.00,    stock:3,      department:"condimentos"        ,img:'../image/platano.jpg'},
-                    {id:"855",     name:"platos-855",       price:35.00,     stock:20,     department:"desechables"        ,img:'../image/platano.jpg'},
-                    {id:"cilp",    name:"cilantro",         price:60.00,     stock:20,     department:"hierbas"            ,img:'../image/platano.jpg'},
-                    {id:"vs10",    name:"vaso#10",          price:45.00,     stock:20,     department:"desechables"        ,img:'../image/platano.jpg'},
-                    {id:"lrl",     name:"lechuga romana",   price:19.50,   stock:24,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"chh",     name:"habanero",         price:98.00,     stock:30,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"sdk",     name:"sandia",           price:9.50,    stock:456,    department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"nad",     name:"naranja dulce",    price:12.00,     stock:18,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"pia",     name:"pina",             price:32.00,     stock:15,     department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                    {id:"uvr",     name:"uva roja",         price:100.00,    stock:8,      department:"frutas y verduras"  ,img:'../image/platano.jpg'},
-                                       
-];
-
-//const ids=products.map((el)=> el.id)
-
-
-
-
-products.map((x)=>{
-    let nombre0=x.name[0].toLocaleUpperCase();
-    let nombre1=x.name.slice(1);
-    let nombre= nombre0+nombre1;
-    let precio=x.price.toFixed(2);
-    let depart0=x.department[0].toLocaleUpperCase();
-    let depart1=x.department.slice(1);
-    let depart=depart0+depart1;
+        li.innerHTML=`
+        <div class="product">
+            <form class="product-info" id=Proid="addpro" action="">
+                <img class="product-picture" src="${producto.img}" alt="${producto.name.toLocaleUpperCase()}">
+                <h5 class="categories">${depart}</h5>
+                <h4 class="title" >${nombre}</h4>
+                <h3 >$ <span class="price">${precio}</span> </h3> 
+                <input type="number"  placeholder="0.00">
+                <button class="button-mp" id="${producto.id}" >Comprar</button>     
+            </form>
+        </div>
+        `;
     
-    card.innerHTML+=`
-    <div class="product">
-        <form class="product-info" id=Proid="addpro" action="">
-            <img class="product-picture" src="${x.img}" alt="${x.name.toLocaleUpperCase()}">
-            <h5 class="categories">${depart}</h5>
-            <h4 class="title" >${nombre}</h4>
-            <h3 >$ <span class="price">${precio}</span> </h3> 
-            <input type="number"  placeholder="0.00">
-            <button class="button-mp" id="${x.id}" >Comprar</button>     
-        </form>
-    </div>
-    `;
+        card.append(li);
+    });
 })
 
 

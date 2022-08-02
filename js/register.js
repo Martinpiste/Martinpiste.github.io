@@ -1,4 +1,6 @@
 
+
+
 let miFormulario =document.getElementById("formulario-mp")
 miFormulario.addEventListener("submit",validarFormulario);
 let dataUser = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -12,6 +14,31 @@ this.email=email;
 this.password=password;
 this.number=number;
 }
+
+/**************************** */
+
+//const btn = document.getElementById('button');
+
+document.getElementById('formulario-mp')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   miFormulario.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_p91kx6f';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        miFormulario.value = 'ENVIAR MENSAJE';
+      alert('Mensaje enviado correctamente');
+    }, (err) => {
+        miFormulario.value = 'ENVIAR MENSAJE';
+      alert(JSON.stringify(err));
+    });
+});
+
+/*************************** */
 
 function validarFormulario(e){
 
